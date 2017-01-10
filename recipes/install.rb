@@ -18,6 +18,9 @@ when 'rhel'
   when 6
     # selinux-policy-devel does not exist in RHEL6
     pkgs = ['policycoreutils-python', 'selinux-policy', 'setools-console', 'make']
+  when 2016..2017
+    # amazon linux support (rhel 6 like)
+    pkgs = ['policycoreutils-python', 'selinux-policy', 'setools-console', 'make']
   when 7
     pkgs = ['policycoreutils-python', 'selinux-policy-devel', 'setools-console', 'make']
   else
